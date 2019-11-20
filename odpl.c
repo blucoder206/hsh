@@ -19,3 +19,17 @@ char *_getenv(char *name)
 		}
 	}
 }
+int main (void) {
+	char *str;
+	const char s[2] = ":\n";
+	char *token;
+	str = _getenv("PATH");
+	token = strtok(str, s);
+
+	while( token != NULL )
+	{
+		printf( "%s\n", token );
+		token = strtok(NULL, s);
+   }
+   return(0);
+}
