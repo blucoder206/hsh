@@ -1,17 +1,26 @@
-#include <stdio.h>
-#include <string.h>
+#include "holberton.h"
 extern char **environ;
-
-char *_getenv(const char *name)
+char *_getenv(char *name)
 {
-	if ()
+	int i, len_value;
+	char *copy_name, *value;
+
+	copy_name = malloc(_strlen(name) + 2);
+	_strcpy(copy_name,name);
+	value = _strcat(copy_name, "=");
+	len_value = _strlen(value);
+
+	for (i = 0; environ[i] != NULL; i++)
 	{
+		if (strncmp(value, environ[i], len_value) == 0)
+		{
+			free(copy_name);
+			return(environ[i] + len_value);
+		}
 	}
-	return (printenv);
 }
 int main(void)
 {
-	char *envvar = "PATH";
-	printf("PATH: %s\n", _getenv(envvar));
+	printf("%s\n", _getenv("PATH"));
 	return (0);
 }

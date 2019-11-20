@@ -10,8 +10,8 @@ int main(int ac, char **av, char **env)
     unsigned int i;
 	i = 0;
     while (env[i] != NULL)
-    {
-		printf("%s\n", env[i]);
+   {
+		printf("%s\n", env[9]);
 		i++;
 	}
     return (0);
