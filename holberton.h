@@ -10,12 +10,14 @@
 char *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
+char *_getenv(char *name);
 
 typedef struct list_path
 {
 	char *str;
-	struct my_path *next;
+	struct list_path *next;
 } list_path;
 
-list_path *add_node_end(list_path **head, const char **array_path);
+list_path *add_node_end(list_path **head, char *array_path);
+size_t print_list(const list_path *h);
 #endif
