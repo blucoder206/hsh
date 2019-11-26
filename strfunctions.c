@@ -5,7 +5,7 @@
 * @dest: destination
 * Return: dest
 **/
-char *_strcat(char *dest, char *src)
+void *_strcat(char *dest, char *src)
 {
         int i, j, l;
 
@@ -21,6 +21,8 @@ char *_strcat(char *dest, char *src)
         }
         return (dest);
 }
+
+
 /**
 * _strcpy - copy the string src to string dest
 * @src: string source

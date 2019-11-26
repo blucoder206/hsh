@@ -7,10 +7,14 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-char *_strcat(char *dest, char *src);
+#include <sys/wait.h>
+
+
+void *_strcat(char *dest, char *src);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 char *_getenv(char *name);
+//void *__strcat(char *dest, char *src);
 
 typedef struct list_path
 {
@@ -21,3 +25,11 @@ typedef struct list_path
 list_path *add_node_end(list_path **head, char *array_path);
 size_t print_list(const list_path *h);
 #endif
+
+
+
+/*char *_strcat(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
+char *_getenv(char *name);
+#endif*/
